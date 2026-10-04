@@ -1,8 +1,7 @@
 package avc.contents.blocks;
 
-import mindustry.type.Item;
 import mindustry.content.Items;
-import mindustry.content.ItemStack;
+import mindustry.type.ItemStack;
 import mindustry.type.Category;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.PowerTurret;
@@ -12,8 +11,10 @@ public class AVCTurret{
     waveGun;
         public static void load(){
             waveGun = new PowerTurret("waveGun"){{
-                requirements(Category.turret,ItemStack(Items.silicon, 100));
-            }};
-        }
+                requirements(Category.turret, ItemStack.with(Items.silicon, 100));
+                health = 10800;
+                size = 2;
+                armor = 3;
 
-}
+            }};
+}}
