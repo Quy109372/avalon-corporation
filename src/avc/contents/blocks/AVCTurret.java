@@ -10,6 +10,7 @@ import arc.graphics.Color;
 import mindustry.type.Category;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.PowerTurret;
+import arc.Core;
 
 public class AVCTurret{
     public static Block 
@@ -25,9 +26,11 @@ public class AVCTurret{
                 inaccuracy = 1f;
                 shootCone = 360f;
                 rotateSpeed = 5f;
-                //shootSound = shootSound1;
+                range = 200;
+                shootSound =  Core.audio.newSound(Core.files.internal("sounds/shootSound1")); //AI generated, yea idk how to use this shoot sound shih
                 consumePower(5f);
-                shootType = new BasicBulletType(5f, 10f){{
+                shootType = new BasicBulletType(15f, 2400f){{
+                    sprite = "bullet1";
                     shrinkX = 0.1f;
                     shrinkY = 0.1f;
                     lifetime = 60f;
