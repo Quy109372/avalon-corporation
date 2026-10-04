@@ -1,6 +1,9 @@
 package avc.contents.blocks;
 
+import library.AVCLine;
+
 import mindustry.content.Items;
+import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.effect.ParticleEffect;
@@ -9,13 +12,27 @@ import mindustry.type.ItemStack;
 import arc.graphics.Color;
 import mindustry.type.Category;
 import mindustry.world.Block;
+import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.defense.turrets.PowerTurret;
 import arc.Core;
-
 public class AVCTurret{
     public static Block 
-    waveGun;
+    waveGun, test;
         public static void load(){
+            test = new PowerTurret("test") {{
+                requirements(Category.turret, ItemStack.with(Items.silicon,1));
+                health =999999999;
+                size = 1;
+                armor = 999999999;
+                hasPower= true;
+                consumesPower= true;
+                consumePower(1f);
+                shootType = new BasicBulletType(1,1){{
+                    shootEffect = Fx.shootSmall;
+                    despawnEffect = AVCLine.drawLine;
+                }};
+                
+            }};
             waveGun = new PowerTurret("waveGun"){{
                 requirements(Category.turret, ItemStack.with(Items.silicon, 100));
                 hasPower = true;
@@ -62,4 +79,5 @@ public class AVCTurret{
                     backColor = Color.valueOf("ffffffff");
                 }};
             }};
+
 }}
