@@ -3,6 +3,7 @@ package avc;
 import arc.*;
 import arc.util.*;
 import avc.contents.AVCItem;
+import avc.contents.blocks.AVCTurret;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
@@ -30,6 +31,8 @@ public class avcMain extends Mod{
     public void loadContent(){
         Log.info("loading AVCItem");
         AVCItem.load();
+        Log.info("loading AVCTurret.java");
+        AVCTurret.load();
     }
 
 }
