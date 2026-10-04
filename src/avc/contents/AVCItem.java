@@ -8,7 +8,7 @@ public class AVCItem {
     public static Item
     fireSteel;
     public static void load(){
-        fireSteel = new Item("fire steel", Color.valueOf("FF3A3AFF")) {{
+        fireSteel = new Item("fireSteel", Color.valueOf("FF3A3AFF")) {{
             charge = 2;
             flammability = 0.85f;
             shownPlanets.add(Planets.serpulo);
