@@ -17,6 +17,15 @@ public class AVCLine {
         float randHeight2 = r.nextFloat(Core.camera.height + 100);
 
         Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
+        Drawf.line(Color.white, randWidth1, randHeight1, randWidth2, randHeight2);
     });
 }
 
